@@ -1,0 +1,40 @@
+@charset "UTF-8"
+//----- header Logo ------------
+header
+    position: fixed
+    width: 100%
+    background-color: $colorRed
+    z-index: 10001
+
+.header-inner
+    height: 0
+    padding-top: 42px
+    position: relative
+
+@media(min-width: 768px)
+    .header-inner
+        padding-top: 48px
+
+
+.logo
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    display: block
+
+    img
+        display: block
+        width: 138px
+        height: 24px
+        color: $colorWhite
+
+@media(min-width: 768px)
+    .logo
+        left: 10%
+        transform: translate(0%, -50%)
+
+        img
+            display: block
+            width: 184px
+            height: 32px

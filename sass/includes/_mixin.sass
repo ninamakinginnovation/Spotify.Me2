@@ -1,0 +1,70 @@
+@mixin align
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+
+@mixin alignX
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+
+@mixin alignY
+    position: absolute
+    left: 50%
+    transform: translateY(-50%)
+
+
+
+
+
+// 陰影特效
+@mixin dropShadow
+	filter: drop-shadow(0px 6px 6px rgba($colorBlack, 0.25))
+@mixin boxShadow-btn
+	box-shadow: inset 0px -4px 12px rgba($colorBlack, 0.25)
+
+
+
+// 黑邊
+@mixin block
+    border: 2px solid black
+
+
+
+// 繪製三角形
+// 上
+@mixin triangle_top($color,$w,$h)
+    height: 0px
+    width: 0px
+    border-color: $color transparent transparent transparent
+    border-style: solid
+    border-width: 0 $h $w $h
+// 右
+@mixin triangle_right($color,$w,$h)
+    height: 0px
+    width: 0px
+    border-color: transparent transparent transparent $color
+    border-style: solid
+    border-width: $w 0 $w $h
+// 下
+@mixin triangle_bottom($color,$w,$h)
+    height: 0px
+    width: 0px
+    border-color: transparent transparent $color transparent
+    border-style: solid
+    border-width: $w $h 0 $h
+// 左
+@mixin triangle_left($color,$w,$h)
+    height: 0px
+    width: 0px
+    border-color: transparent $color transparent transparent   
+    border-style: solid
+    border-width: $w $h $w 0
+
+
+
+
+
+
+
